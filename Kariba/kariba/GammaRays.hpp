@@ -28,8 +28,7 @@ struct HetagParams {
 class Grays : public Radiation {
     //	private:
   public:
-    ~Grays();
-    Grays(int s1, double numin, double numax);
+    Grays(size_t size, double numin, double numax);
 
     // Method to set the gamma-rays from pp inelastic interactions. p: pspec_p,
     // ntot_prot: total proton number density of the jet segment,

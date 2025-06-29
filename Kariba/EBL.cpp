@@ -1584,7 +1584,7 @@ struct {
 
 // Now define the function that does the EBL attenuation correction for the
 // model by Gilmore et al. (2012)
-void ebl_atten_gil(int size, double *en, double *lum, double redshift) {
+void ebl_atten_gil(int size, const std::vector<double>& en, std::vector<double>& lum, double redshift) {
     if (redshift < LUT.redshift[0]) {
         std::cout << "Redshift is too small for EBL model(0.01 < redshift < "
                      "9.00). No interpolation possible."
